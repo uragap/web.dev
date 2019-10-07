@@ -26,7 +26,8 @@ guidance about how to use them effectively.
 1. [Glitch](#glitch)
 1. [Images](#images)
 1. [Instruction](#instruction)
-1. [Lists](#lists)
+1. [Links (external)](#links-(external))
+1. [Lists](#lists-external)
 1. [Callouts](#callouts)
 1. [Stats](#stats)
 1. [Tables](#tables)
@@ -581,6 +582,18 @@ iste culpa. Recusandae sit atque magni aspernatur dolorem vel omnis.
   sit amet ullamcorper.
 - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dictum a massa
   sit amet ullamcorper.
+
+## Links (external)
+
+```html
+Lorem ipsum dolor sit amet,
+<a href="example.com" rel="noopener">consectetur adipiscing elit</a>.
+Proin dictum a massa sit amet ullamcorper.
+```
+
+Lorem ipsum dolor sit amet,
+<a href="example.com" rel="noopener">consectetur adipiscing elit</a>.
+Proin dictum a massa sit amet ullamcorper.
 
 ## Callouts
 

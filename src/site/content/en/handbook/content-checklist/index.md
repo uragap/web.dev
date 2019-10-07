@@ -53,6 +53,8 @@ use it to self-review their content and fix problems rather than waiting for rev
 ## Links
 1. Do all links work?
 1. Are all links to web.dev pages and assets relative?
+1. Do all links to external sites use the markup shown in the
+   [web.dev components post](/handbook/web-dev-components/#links-(external))?
 
 ## Mechanics
 1. Is the text free of spelling and capitalization errors? (Check the [word list](/word-list).)
