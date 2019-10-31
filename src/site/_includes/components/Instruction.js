@@ -110,6 +110,15 @@ module.exports = (type, listStyle = 'ul') => {
       `;
       break;
 
+    case 'devtools-headsup':
+      instruction = html`
+      <div class="w-aside w-aside--note">
+      <p>This codelab uses Chrome DevTools. <a href="https://www.google.com/chrome"
+      rel="noopener">Download Chrome</a> if you don't already have it.</p>
+      </div>
+      `;
+      break;
+
     case 'devtools-command':
       instruction = html`
       ${bullet}Press \`Control+Shift+P\` (or \`Command+Shift+P\` on Mac) to open the **Command** menu.
