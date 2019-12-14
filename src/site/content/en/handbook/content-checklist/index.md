@@ -1,7 +1,8 @@
 ---
 layout: handbook
 title: web.dev content checklist
-date: 2019-10-01
+date: 2019-06-26
+updated: 2019-11-25
 description: |
   A checklist for web.dev content reviews.
 ---
@@ -19,6 +20,7 @@ use it to self-review their content and fix problems rather than waiting for rev
 1. Do the title, subtitle, and description convey the value proposition?
 1. Is the piece 1,000 words or less—or is there a good reason for it to be longer?
 1. Are all statements and advice accurate and aligned with best practices?
+1. Can you complete the task with the provided instructions? Are there any missing steps? Does the code work?
 
 ## Style and voice
 1. Is the [voice](/handbook/voice) appropriate for the web.dev audience?
@@ -30,6 +32,7 @@ use it to self-review their content and fix problems rather than waiting for rev
 1. Headings should not [skip levels](/heading-levels).
 1. Is the structure of the piece clear? Do headings convey the structure?
 1. Does each paragraph focus on one main idea?
+1. Does the subheading draw the reader in or provide extra context? Is it concise? Is it unique text?
 
 ## Instruction
 1. If the piece expects readers to have prior knowledge, is that made clear up front?
@@ -43,6 +46,7 @@ use it to self-review their content and fix problems rather than waiting for rev
 1. Are any images or videos included that don't directly relate to ideas in the text?
 1. Are [image captions](/handbook/use-media/#image-captions) correctly formatted?
 1. Do all images have [alt text](/image-alt)?
+1. (Blog only) If the post has a hero image, does the hero image look good on web.dev/blog?
 
 ## Code
 1. Are code blocks and sample apps as simple as possible while still conveying the core concept?
@@ -51,10 +55,13 @@ use it to self-review their content and fix problems rather than waiting for rev
 1. Is all sample code [accessible](/inclusion-and-accessibility/#create-accessible-code-blocks)?
 
 ## Links
+
 1. Do all links work?
-1. Are all links to web.dev pages and assets relative?
+1. Are all links to web.dev pages and assets [relative](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_URL#Examples_of_relative_URLs)?
+   This is important because if we need to move content around, relative paths are less likely to break.
 1. Do all links to external sites use the markup shown in the
    [web.dev components post](/handbook/web-dev-components/#links-(external))?
+1. When referencing a web platform API, does the page link out to the canonical MDN API reference?
 
 ## Mechanics
 1. Is the text free of spelling and capitalization errors? (Check the [word list](/word-list).)

@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-const {html} = require('common-tags');
-const removeDrafts = require('../../_filters/remove-drafts');
+const {html} = require("common-tags");
+const removeDrafts = require("../../_filters/remove-drafts");
 
 /* eslint-disable max-len */
 
@@ -29,11 +29,26 @@ function getPostCount(learningPath) {
   // in path.njk. Ideally we should do this in the learningPath .11ty.js files
   // but eleventy hasn't parsed all of the collections when those files get
   // initialized so we can't look up posts by slug.
-  const topics = removeDrafts(learningPath.topics);
+
+  // Merge subtopic pathItems
+  const flattenedTopics = learningPath.topics.map((topic) => {
+    const subPathItems = (topic.subtopics || []).reduce(
+      (accumulator, subtopic) => {
+        return [...accumulator, ...subtopic.pathItems];
+      },
+      [],
+    );
+    return {
+      ...topic,
+      pathItems: [...(topic.pathItems || []), ...subPathItems],
+    };
+  });
+
+  const topics = removeDrafts(flattenedTopics);
   const count = topics.reduce((pathItemsCount, topic) => {
     return pathItemsCount + topic.pathItems.length;
   }, 0);
-  const label = count > 1 ? 'resources' : 'resource';
+  const label = count > 1 ? "resources" : "resource";
   return `${count} ${label}`;
 }
 
@@ -66,7 +81,14 @@ module.exports = (path) => {
           </ul>
         </div>
         <div class="w-path-card__cover">
-          <img class="w-path-card__cover-image" src="${path.cover}" alt="" />
+          <img
+            class="w-path-card__cover-image"
+            src="${path.cover}"
+            alt=""
+            loading="lazy"
+            width="100%"
+            height="240"
+          />
         </div>
         <div class="w-path-card__desc">
           <h2 class="w-path-card__headline">${path.title}</h2>
