@@ -7,6 +7,6 @@ pretranslate:
     - "^(title|authors|date|description): "
 
   paths:
-  - source: "src/site/content/en"
+  - source: "src/site/content/en/angular"
     include:
     - "angular/**/index.md"
