@@ -9,4 +9,4 @@ pretranslate:
   paths:
   - source: "src/site/content/en"
     include:
-    - "accessible/**/index.md"
+    - "angular/**/index.md"
