@@ -10,3 +10,4 @@ pretranslate:
   - source: "src/site/content/en/angular"
     include:
     - "**/index.md"
+    - "accessible-angular-with-codelyzer/index.md"
